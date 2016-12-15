@@ -9,7 +9,8 @@
     "noEmitOnError": true,
     "sourceMap": true,
     "outDir": "ts-build",
-    "jsx": "preserve"
+    "jsx": "react",
+    "removeComments": true
   },
   "exclude": [
     "node_modules"

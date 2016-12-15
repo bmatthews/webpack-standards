@@ -13,8 +13,8 @@ import { not, env } from '../../services/WebpackService'
 
 const getPipeline = (builder, settings, isEs, isReact) =>
   builder
-    .es()
-    .esReact(() => isReact)
+    .es(() => isEs)
+    .esReact(() => isEs && isReact)
     .ts(() => !isEs)
     .tsReact(() => !isEs && isReact)
     .sourceMap(env('development'), 'cheap-module-source-map')
