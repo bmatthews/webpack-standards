@@ -1,7 +1,9 @@
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
-import { AppContainer } from 'react-hot-loader'
 import App from './App'
+const { AppContainer } = require('react-hot-loader')
+
+declare var module: { hot: any };
 
 const render = () => {
   ReactDOM.render(

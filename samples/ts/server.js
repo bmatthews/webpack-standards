@@ -1,6 +1,6 @@
 import path from 'path'
-import { webpackService } from 'webpack-standards'
-import standard from 'webpack-standards/configs/standard'
+import { webpackService } from '../../src'
+import standard from '../../src/configs/standard'
 
 const config = webpackService
   .register(standard)
@@ -10,6 +10,6 @@ const config = webpackService
   .tsReactStandard()
   .get()
 
-console.log(config)
+console.log(config.module)
 
 webpackService.run(config)

@@ -9,12 +9,12 @@ import devServerConfig from './dev-server.config'
 import hmrConfig from './hmr.config'
 import htmlConfig from './html.config'
 import optimizeConfig from './optimize.config'
-import { not, env } from '../../WebpackService'
+import { not, env } from '../../services/WebpackService'
 
 const getPipeline = (builder, settings, isEs, isReact) =>
   builder
-    .es(() => isEs)
-    .esReact(() => isEs && isReact)
+    .es()
+    .esReact(() => isReact)
     .ts(() => !isEs)
     .tsReact(() => !isEs && isReact)
     .sourceMap(env('development'), 'cheap-module-source-map')

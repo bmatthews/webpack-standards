@@ -1,8 +1,8 @@
 /* eslint-disable react/prefer-stateless-function */
-import React, { Component } from 'react'
+import * as React from 'react'
 import Test from './Test'
 
-class App extends Component {
+class App extends React.Component<undefined, any> {
   render() {
     return (
       <div>

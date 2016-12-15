@@ -6,13 +6,16 @@ const tsConfig = {
     rules: [{
       test: /\.ts$/,
       exclude: /node_modules/,
-      loader: 'ts-loader'
+      loaders: ['babel-loader', 'ts-loader']
     }]
   },
   resolve: {
     extensions: ['.ts']
   }
 }
+
+// TODO: remove jsx option and move to ts-react
+// TODO: sort out source map plugin when using ts
 
 export default (config, settings) =>
   merge.smart(config, tsConfig)
