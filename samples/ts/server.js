@@ -14,7 +14,7 @@ const config = webpackService
     module: {
       rules: [{
         test: /\.tsx?$/,
-        loaders: ['awesome-typescript-loader']
+        loader: 'awesome-typescript-loader'
       }]
     },
     resolve: {
@@ -25,7 +25,10 @@ const config = webpackService
     },
     plugins: [
       new CheckerPlugin()
-    ]
+    ],
+    performance: {
+      hints: false
+    }
   })
 
 console.log(config.module)
