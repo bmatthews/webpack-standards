@@ -1,0 +1,17 @@
+node_modules
+npm-debug.log
+/lint
+/common.config.js
+/development.config.js
+/production.config.js
+/dev-server-config.js
+/configuration-service.js
+/WebpackService.js
+/KarmaService.js
+/utils.js
+/index.js
+/config
+/coverage
+/WebpackService
+/configs
+/utils
