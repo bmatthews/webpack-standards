@@ -6,7 +6,10 @@ const tsConfig = {
     rules: [{
       test: /\.ts$/,
       exclude: /node_modules/,
-      loader: 'awesome-typescript-loader'
+      loaders: ['babel-loader?' + JSON.stringify({
+        presets: [["es2015", { "modules": false }], "stage-0"],
+        babelrc: false
+      }), 'awesome-typescript-loader']
     }]
   },
   resolve: {

@@ -5,7 +5,10 @@ const tsReactConfig = {
     rules: [{
       test: /\.tsx$/,
       exclude: /node_modules/,
-      loader: 'awesome-typescript-loader'
+      loaders: ['babel-loader?' + JSON.stringify({
+        presets: [["es2015", { "modules": false }], "stage-0", "react"],
+        babelrc: false
+      }), 'awesome-typescript-loader']
     }]
   },
   resolve: {
