@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.webpackService = exports.not = exports.env = undefined;
+exports.webpackServiceStandard = exports.webpackService = exports.not = exports.env = undefined;
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
@@ -161,6 +161,14 @@ var WebpackService = function () {
       return this.builderGet();
     }
   }, {
+    key: 'with',
+    value: function _with(nameOrArray, configurator) {
+      this.register(nameOrArray, configurator);
+      return _extends({}, this.configure(), {
+        run: this.run
+      });
+    }
+  }, {
     key: 'run',
     value: function run(webpackConfig, settings) {
 
@@ -205,3 +213,5 @@ var not = exports.not = function not(predicate) {
 };
 
 var webpackService = exports.webpackService = new WebpackService();
+
+var webpackServiceStandard = exports.webpackServiceStandard = new WebpackService().with(_standard2.default);

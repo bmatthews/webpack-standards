@@ -5,7 +5,7 @@ class Test extends React.Component<undefined, any> {
   render() {
     return (
       <div>
-        <p>Hello world!!!</p>
+        <p>Hello world!</p>
       </div>
     )
   }

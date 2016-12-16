@@ -6,7 +6,7 @@ const tsConfig = {
     rules: [{
       test: /\.ts$/,
       exclude: /node_modules/,
-      loaders: ['babel-loader', 'ts-loader']
+      loader: 'awesome-typescript-loader'
     }]
   },
   resolve: {
