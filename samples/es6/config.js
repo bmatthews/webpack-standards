@@ -2,7 +2,7 @@ import path from 'path'
 import { webpackService } from '../../src'
 import standard from '../../src/configs/standard'
 
-const port = 8080
+const port = 7000
 
 const config = webpackService
   .register(standard)

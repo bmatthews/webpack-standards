@@ -19,7 +19,7 @@ const getHmrConfig = port => ({
   }
 })
 
-export default (config, settings) => {  
+export default (config, settings) => {
   const port = (settings && settings.port) || 8080
 
   const mergedConfig = merge.smartStrategy({
