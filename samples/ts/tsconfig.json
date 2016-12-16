@@ -8,7 +8,7 @@
     "noImplicitAny": false,
     "noEmitOnError": true,
     "sourceMap": true,
-    "outDir": "ts-build",
+    "outDir": "dist",
     "jsx": "react",
     "removeComments": true
   },

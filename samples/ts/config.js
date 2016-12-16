@@ -6,7 +6,7 @@ const config = webpackService
   .register(standard)
   .configure()
   .entry(path.resolve(__dirname, './src/index.tsx'))
-  .output(path.resolve(__dirname, './src'))
+  .output(path.resolve(__dirname, './dist'))
   .tsReactStandard()
   .get()
 
