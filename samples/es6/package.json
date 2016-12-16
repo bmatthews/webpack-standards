@@ -28,7 +28,6 @@
     "babel-polyfill": "^6.13.0",
     "react": "^15.3.1",
     "react-dom": "^15.3.1",
-    "webpack": "2.1.0-beta.28",
-    "webpack-standards": "file:../../src"
+    "webpack": "2.1.0-beta.28"
   }
 }

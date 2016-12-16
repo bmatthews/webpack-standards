@@ -1,18 +1,23 @@
 {
   "compilerOptions": {
-    "module": "es6",
-    "target": "es6",
+    "module": "es2015",
+    "target": "commonjs",
     "moduleResolution": "node",
     "baseUrl": "src",
     "allowSyntheticDefaultImports": true,
     "noImplicitAny": false,
     "noEmitOnError": true,
     "sourceMap": true,
-    "outDir": "ts-build",
-    "jsx": "preserve"
+    "outDir": "dist",
+    "jsx": "preserve",
+    "removeComments": true
   },
   "exclude": [
     "node_modules"
   ],
-  "compileOnSave": false
+  "compileOnSave": false,
+  "awesome-typescript-loader": {
+    "useBabel": true,
+    "useCache": true
+  }
 }
