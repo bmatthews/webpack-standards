@@ -1,6 +1,6 @@
 import path from 'path'
-import { webpackService } from 'webpack-standards'
-import standard from 'webpack-standards/configs/standard'
+import { webpackService } from '../../src'
+import standard from '../../src/configs/standard'
 
 const port = 7000
 
@@ -11,5 +11,7 @@ const config = webpackService
   .output(path.resolve(__dirname, './src'))
   .esReactStandard({ port })
   .get()
+
+console.log(config)
 
 webpackService.run(config, { port })
