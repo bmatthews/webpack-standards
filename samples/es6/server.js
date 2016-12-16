@@ -1,17 +1,5 @@
-import path from 'path'
-import { webpackService } from '../../src'
-import standard from '../../src/configs/standard'
+import config from './config'
 
-const port = 7000
+console.log(config.module)
 
-const config = webpackService
-  .register(standard)
-  .configure()
-  .entry(path.resolve(__dirname, './src/index.jsx'))
-  .output(path.resolve(__dirname, './src'))
-  .esReactStandard({ port })
-  .get()
-
-console.log(config)
-
-webpackService.run(config, { port })
+webpackService.run(config, { port: 7000 })

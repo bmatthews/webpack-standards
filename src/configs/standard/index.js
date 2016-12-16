@@ -9,6 +9,7 @@ import devServerConfig from './dev-server.config'
 import hmrConfig from './hmr.config'
 import htmlConfig from './html.config'
 import optimizeConfig from './optimize.config'
+import performanceConfig from './performance.config'
 import { not, env } from '../../services/WebpackService'
 
 const getPipeline = (builder, settings, isEs, isReact) =>
@@ -23,6 +24,7 @@ const getPipeline = (builder, settings, isEs, isReact) =>
     .hmr(env('development'), settings)
     .html()
     .optimize(env('production'))
+    .performance(env('development'), { hints: false })
 
 const esStandard = (builder, settings) =>
   getPipeline(builder, settings, true, false)
@@ -48,6 +50,7 @@ const standard = [
   { name: 'hmr', config: hmrConfig },
   { name: 'html', config: htmlConfig },
   { name: 'optimize', config: optimizeConfig },
+  { name: 'performance', config: performanceConfig },
   { name: 'esStandard', pipeline: esStandard },
   { name: 'esReactStandard', pipeline: esReactStandard },
   { name: 'tsStandard', pipeline: tsStandard },

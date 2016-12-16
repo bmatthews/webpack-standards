@@ -17,8 +17,6 @@ const tsConfig = {
   }
 }
 
-// TODO: remove jsx option and move to ts-react
 // TODO: sort out source map plugin when using ts
-
 export default (config, settings) =>
   merge.smart(config, tsConfig)

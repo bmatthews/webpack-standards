@@ -5,4 +5,5 @@ npm-debug.log
 /index.js
 /utils
 /services
+/samples/es6/dist
 /samples/ts/dist
