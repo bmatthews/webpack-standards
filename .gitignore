@@ -1,6 +1,7 @@
 node_modules
 npm-debug.log
 .awcache
+config-output.json
 /configs
 /index.js
 /utils

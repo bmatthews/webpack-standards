@@ -1,8 +1,16 @@
+import fs from 'fs'
 import merge from 'webpack-merge'
 import webpack from 'webpack'
 import WebpackDevServer from 'webpack-dev-server'
 import { isFunction } from '../utils'
 import standard from '../configs/standard'
+
+const replacer = (key, value) => {
+  if (value instanceof RegExp)
+    return (value.toString())
+  else
+    return value
+}
 
 class WebpackService {
 
@@ -111,6 +119,25 @@ class WebpackService {
     })
   }
 
+  output(config, path) {
+    if (!config) {
+      throw new Error('Attempting to output an invalid config')
+    }
+
+    if (!path) {
+      throw new Error('Attempting to output a config to an invalid path')
+    }
+
+    const json = JSON.stringify(config, replacer, 2)
+    fs.writeFile(path, json, function(err) {
+      if(err) {
+        return console.log(err)
+      }
+
+      console.log(`Webpack config outputted to ${path}`)
+    })
+  }
+
   configure(config) {
     this.currentConfig = config || {}
     return this.builderGet()
@@ -120,7 +147,8 @@ class WebpackService {
     this.register(nameOrArray, configurator)
     return {
       ...this.configure(),
-      run: this.run
+      run: this.run,
+      output: this.output
     }
   }
 

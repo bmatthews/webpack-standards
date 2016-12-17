@@ -1,6 +1,8 @@
+import path from 'path'
 import config from './config'
 import { webpackService } from '../../src'
 
-console.log(config.module)
+console.log(config)
 
-webpackService.run(config, { port: 7000 })
+webpackService.output(config, path.resolve(__dirname, './config-output.json'))
+webpackService.run(config)

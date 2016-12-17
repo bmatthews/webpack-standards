@@ -9,7 +9,11 @@ const config = webpackService
   .configure()
   .entry(path.resolve(__dirname, './src/index.jsx'))
   .output(path.resolve(__dirname, './dist'))
-  .esReactStandard({ port })
+  .es()
+  .esReact()
+  .devServer()
+  .hmr()
+  .html()
   .get()
 
 export default config
