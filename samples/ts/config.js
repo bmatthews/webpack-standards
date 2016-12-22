@@ -1,6 +1,6 @@
 import path from 'path'
-import { webpackService } from '../../src'
-import standard from '../../src/configs/standard'
+import { webpackService } from 'webpack-standards'
+import standard from 'webpack-standards/configs/standard'
 
 const config = webpackService
   .register(standard)

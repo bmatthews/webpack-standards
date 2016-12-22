@@ -9,5 +9,5 @@ const config = webpackService
 
 console.log(config)
 
-webpackService.output(config, path.resolve(__dirname, './config-output.json'))
-// webpackService.run(config)
+// webpackService.output(config, path.resolve(__dirname, './config-output.json'))
+webpackService.run(config)

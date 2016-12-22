@@ -8,3 +8,4 @@ config-output.json
 /services
 /samples/es6/dist
 /samples/ts/dist
+/lint
