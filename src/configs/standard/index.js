@@ -22,7 +22,7 @@ const getPipeline = (builder, settings, isEs, isReact) =>
     .sourceMap(not(env('development')), 'inline-source-map')
     .devServer(env('development'))
     .hmr(env('development'), settings)
-    .html()
+    .html(settings && settings.html)
     .optimize(env('production'))
     .performance(env('development'), { hints: false })
 
