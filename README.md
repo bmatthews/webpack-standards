@@ -8,7 +8,7 @@ cd my-app
 npm init
 npm i react react-dom babel-polyfill --save
 npm i babel-cli babel-register cross-env --save-dev
-npm i webpack-standards --save-dev
+npm i webpack webpack-standards --save-dev
 ```
 
 Create a `server.js` folder in the root of your project:
@@ -26,7 +26,7 @@ const config = webpackService
 webpackService.run(config)
 ```
 
-Here we're creating a React application in es6, and our starting code is in the `src/index.js` file:
+Here we're creating a React application in ES6, and our starting code is in the `src/index.js` file:
 
 ```javascript
 import React from 'react'
@@ -79,5 +79,5 @@ That's it for your application, now we update your `package.json` to include `st
 }
 ```
 
-Because we installed the `babel-cli` and `babel-register` packages, we can write our `server.js` file in es6 and use `babel-node` from the command line. We can also use `cross-env` to set the `NODE_ENV` environment variable to production for our build.
+Because we installed the `babel-cli` and `babel-register` packages, we can write our `server.js` file in ES6 and use `babel-node` from the command line. We can also use `cross-env` to set the `NODE_ENV` environment variable to production for our build.
 
